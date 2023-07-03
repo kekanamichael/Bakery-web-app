@@ -1,0 +1,42 @@
+
+package com.techgiants.topiefor.model;
+
+
+//KG, G, MG, L, ML, CUP, TABLE_SPOON, TEA_SPOON, DOZEN, UNIT, PINCH
+public enum UnitConverter {
+    KG2G(1000),G2KG(0.001)
+    ,KG2CUP(10),CUP2KG(0.1)
+    ,G2CUP(0.01),CUP2G(100)
+    ,MG2CUP(0.0001),CUP2MG(10000)
+    ,KG2MG(1000000),MG2KG(0.000001)
+    ,KG2TEA_SPOON(200),TEA_SPOON2KG(0.005)
+    ,KG2TABLE_SPOON(50),TABLE_SPOON2KG(0.02)
+    ,KG2PINCH(500),PINCH2KG(0.002)
+    ,G2MG(1000),MG2G(0.001)
+    ,G2TEA_SPOON(0.2),TEA_SPOON2G(5)
+    ,G2TABLE_SPOON(0.05),TABLE_SPOON2G(20)
+    ,G2PINCH(0.5),PINCH2G(2)
+    ,MG2TEA_SPOON(0.002),TEA_SPOON2MG(5000)
+    ,MG2TABLE_SPOON(0.00005),TABLE_SPOON2MG(20000)
+    ,MG2PINCH(0.0005),PINCH2MG(2000)
+    ,L2ML(1000),ML2L(0.001)
+    ,L2CUP(250),CUP2L(0.004)
+    ,L2TEA_SPOON(200),TEA_SPOON2L(0.005)
+    ,L2TABLE_SPOON(50),TABLE_SPOON2L(0.02)
+    ,ML2TEA_SPOON(0.2),TEA_SPOON2ML(5)
+    ,ML2TABLE_SPOON(0.05),TABLE_SPOON2ML(20)
+    ,UNIT2DOZEN(1.0/12),DOZEN2UNIT(12)
+    ;
+    
+    private final double value;
+
+    public double getValue() {
+        return value;
+    }
+
+    private UnitConverter(double value) {
+        this.value = value;
+    }
+    
+    
+}
